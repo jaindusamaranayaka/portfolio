@@ -48,15 +48,7 @@
         }
     
         /* Premium Aesthetic Updates */
-        .animate-on-scroll { 
-            opacity: 0; 
-            transform: translateY(10px); 
-            transition: opacity 0.25s ease-out, transform 0.25s ease-out; 
-        }
-        .animate-on-scroll.is-visible { 
-            opacity: 1; 
-            transform: translateY(0); 
-        }
+        
         
         .ken-burns { 
             animation: kenBurns 20s infinite alternate linear; 
@@ -150,7 +142,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 
-                <article class="animate-on-scroll bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-blue-300 dark:hover:border-blue-500/50 transition-all duration-300 group flex flex-col">
+                <article class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-blue-300 dark:hover:border-blue-500/50 transition-all duration-300 group flex flex-col">
                     <div class="carousel-container relative h-56 md:h-64 overflow-hidden">
                         <div class="carousel-track flex w-full h-full transition-transform duration-500 ease-in-out">
                             <img src="assets/slrc-1.jpg" class="w-full h-full object-cover shrink-0">
@@ -168,7 +160,7 @@
                     </div>
                 </article>
 
-                <article class="animate-on-scroll bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-emerald-400 dark:hover:border-emerald-500/50 transition-all duration-300 group flex flex-col">
+                <article class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-emerald-400 dark:hover:border-emerald-500/50 transition-all duration-300 group flex flex-col">
                     <div class="carousel-container relative h-56 md:h-64 overflow-hidden">
                         <div class="carousel-track flex w-full h-full transition-transform duration-500 ease-in-out">
                             <img src="assets/mentor-1.jpg" class="w-full h-full object-cover shrink-0">
@@ -186,7 +178,7 @@
                     </div>
                 </article>
 
-                <article class="animate-on-scroll bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-blue-300 dark:hover:border-blue-500/50 transition-all duration-300 lg:col-span-2 group">
+                <article class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-blue-300 dark:hover:border-blue-500/50 transition-all duration-300 lg:col-span-2 group">
                     <div class="w-14 h-14 bg-blue-50 dark:bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400 mb-6 border border-blue-100 dark:border-blue-500/20 group-hover:scale-110 transition-transform duration-300">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
                     </div>
@@ -321,24 +313,7 @@
         });
 
         /* --- Premium Aesthetic JS --- */
-        // 3. Scroll Animations (Intersection Observer)
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // Animate only once
-                }
-            });
-        }, observerOptions);
-
-        const animatedElements = document.querySelectorAll('.animate-on-scroll');
-        animatedElements.forEach(el => observer.observe(el));
+        
 
     </script>
 </body>

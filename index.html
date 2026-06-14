@@ -48,15 +48,7 @@
         }
     
         /* Premium Aesthetic Updates */
-        .animate-on-scroll { 
-            opacity: 0; 
-            transform: translateY(10px); 
-            transition: opacity 0.25s ease-out, transform 0.25s ease-out; 
-        }
-        .animate-on-scroll.is-visible { 
-            opacity: 1; 
-            transform: translateY(0); 
-        }
+        
         
         .ken-burns { 
             animation: kenBurns 20s infinite alternate linear; 
@@ -293,24 +285,7 @@
         });
 
         /* --- Premium Aesthetic JS --- */
-        // 3. Scroll Animations (Intersection Observer)
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // Animate only once
-                }
-            });
-        }, observerOptions);
-
-        const animatedElements = document.querySelectorAll('.animate-on-scroll');
-        animatedElements.forEach(el => observer.observe(el));
+        
 
     </script>
 </body>
