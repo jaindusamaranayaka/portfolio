@@ -23,7 +23,7 @@
         body { font-family: 'Inter', sans-serif; }
         
         .page-section { 
-            animation: fadeIn 0.4s ease-out forwards; 
+            animation: fadeIn 0.15s ease-out forwards; 
         }
         
         @keyframes fadeIn {
@@ -57,8 +57,8 @@
         /* Premium Aesthetic Updates */
         .animate-on-scroll { 
             opacity: 0; 
-            transform: translateY(30px); 
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); 
+            transform: translateY(10px); 
+            transition: opacity 0.25s ease-out, transform 0.25s ease-out; 
         }
         .animate-on-scroll.is-visible { 
             opacity: 1; 
@@ -304,7 +304,7 @@
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.1
+            threshold: 0
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
